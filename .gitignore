@@ -176,3 +176,6 @@ media/images/*
 media/csv_files/*
 media/text_files/*
 env
+web/nginx.docker.conf
+web/get_token.lua
+deploy.docker-compose.yaml
