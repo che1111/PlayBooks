@@ -11,17 +11,17 @@
 
 /* nprogress custom styles */
 #nprogress .bar {
-  background: #9553fe !important;
+  background: #16edff !important;
   height: 3px !important; /* Default is 2px, increase to 3px */
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px #9553fe, 0 0 5px #9553fe !important;
+  box-shadow: 0 0 10px #16edff, 0 0 5px #16edff !important;
 }
 
 #nprogress .spinner-icon {
-  border-top-color: #9553fe !important;
-  border-left-color: #9553fe !important;
+  border-top-color: #16edff !important;
+  border-left-color: #16edff !important;
 }
 
 img {
@@ -34,11 +34,11 @@ img {
 }
 
 .MuiCircularProgress-colorPrimary {
-  color: #9553fe !important;
+  color: #16edff !important;
 }
 
 .activeNavLink {
-  background-color: #9553fe !important; /* Active background color */
+  background-color: #16edff !important; /* Active background color */
   color: white !important; /* Active text color, !important to override MUI styles */
 }
 
@@ -67,7 +67,7 @@ img {
 
 .MuiTableCell-root a {
   text-decoration: none !important;
-  color: #9553fe !important;
+  color: #16edff !important;
 }
 
 .MuiTableCell-root a:hover {

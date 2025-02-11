@@ -149,3 +149,30 @@ def create_workflow_execution_util(account: Account, workflow: Workflow, schedul
                                                    triggered_by, execution_metadata,
                                                    proto_to_dict(workflow_configuration))
     return workflow_execution, ''
+
+def create_workflow_execution_util_time_range(account: Account, workflow: Workflow, time_range: TimeRange, scheduled_at, workflow_run_uuid,
+                                   triggered_by=None, workflow_execution_metadata=None) -> (bool, str):
+    execution_metadata = proto_to_dict(workflow_execution_metadata) if workflow_execution_metadata else None
+    schedule = workflow.schedule
+    try:
+        latest_scheduled_at, expiry_at, keep_alive = get_next_workflow_execution(schedule, scheduled_at)
+    except Exception as e:
+        return False, f"Error in calculating next workflow execution: {e} for workflow: {workflow.id}"
+
+    offset = 3600
+    workflow_configuration: WorkflowConfiguration = workflow.configuration if workflow.configuration else WorkflowConfiguration()
+    if workflow_configuration and workflow_configuration.evaluation_window_in_seconds.value:
+        offset = workflow_configuration.evaluation_window_in_seconds.value
+
+    if time_range is None:
+        time_range = TimeRange(time_geq=int(latest_scheduled_at.timestamp()) - offset,
+                               time_lt=int(latest_scheduled_at.timestamp()))
+                               
+    if schedule.type != WorkflowSchedule.Type.ONE_OFF and not expiry_at and not keep_alive:
+        return False, f"Expiry time is required for non-keep alive workflows"
+
+    workflow_execution = create_workflow_execution(account, time_range, workflow.id.value, workflow_run_uuid,
+                                                   scheduled_at, latest_scheduled_at, expiry_at, keep_alive,
+                                                   triggered_by, execution_metadata,
+                                                   proto_to_dict(workflow_configuration))
+    return workflow_execution, ''

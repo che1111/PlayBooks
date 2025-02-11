@@ -134,7 +134,7 @@ function BasicDetails() {
               (Read more about triggers{" "}
               <a
                 rel="noreferrer"
-                style={{ color: "#9553fe" }}
+                style={{ color: "#16edff" }}
                 href="https://docs.drdroid.io/docs/workflows#triggers"
                 target="_blank">
                 here

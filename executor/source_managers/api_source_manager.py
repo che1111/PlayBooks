@@ -122,7 +122,8 @@ class ApiSourceManager(PlaybookSourceManager):
                 content_type = response.headers.get('Content-Type', '')
                 if 'application/json' in content_type:
                     try:
-                        response_data = response.json()
+                        #response_data = response.json()
+                        response_data = {'api_response': response.text}
                         print("Response JSON:", response_data)
                     except json.JSONDecodeError:
                         print("Error: Response content is not valid JSON")

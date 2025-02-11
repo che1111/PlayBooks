@@ -16,7 +16,7 @@ from google.protobuf.wrappers_pb2 import BoolValue, StringValue
 from accounts.models import Account, get_request_account, get_request_user, AccountApiToken
 from executor.workflows.crud.workflow_execution_crud import get_db_workflow_executions, \
     update_db_account_workflow_execution_status, get_workflow_executions
-from executor.workflows.crud.workflow_execution_utils import create_workflow_execution_util
+from executor.workflows.crud.workflow_execution_utils import create_workflow_execution_util, create_workflow_execution_util_time_range
 from executor.workflows.crud.workflows_crud import update_or_create_db_workflow, get_db_workflows
 from executor.workflows.crud.workflows_update_processor import workflows_update_processor
 from executor.workflows.tasks import test_workflow_notification, test_workflow_transformer
@@ -333,10 +333,13 @@ def workflows_execution_get(request_message: ExecutionWorkflowGetRequest) -> \
 @account_post_api(ExecuteWorkflowRequest)
 def workflows_api_execute(request_message: ExecuteWorkflowRequest) -> HttpResponse:
     account: Account = get_request_account()
+    meta: Meta = request_message.meta if request_message.HasField('meta') else None
+    time_range: TimeRange = meta.time_range if meta else None
     user = get_request_user()
     current_time_utc = current_datetime()
     workflow_id = request_message.workflow_id.value
     workflow_name = request_message.workflow_name.value
+    logger.info("meta"+ str(meta) +"time_range: " + str(time_range))
     if not workflow_id and not workflow_name:
         return HttpResponse(json.dumps({'success': False, 'error_message': 'Request Workflow params not found.'}),
                             status=400, content_type='application/json', )
@@ -373,8 +376,7 @@ def workflows_api_execute(request_message: ExecuteWorkflowRequest) -> HttpRespon
 
         workflow_config_proto = dict_to_proto(workflow_config, WorkflowConfiguration)
         workflow.configuration.CopyFrom(workflow_config_proto)
-
-        execution_scheduled, err = create_workflow_execution_util(account, workflow, current_time_utc,
+        execution_scheduled, err = create_workflow_execution_util_time_range(account, workflow, time_range, current_time_utc,
                                                                   workflow_run_uuid, user.email, None)
         if err:
             return HttpResponse(json.dumps(

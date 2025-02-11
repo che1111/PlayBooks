@@ -112,7 +112,7 @@ class GrafanaSourceManager(PlaybookSourceManager):
 
             start_time_str = current_start_time.isoformat() + "Z"
             end_time_str = current_end_time.isoformat() + "Z"
-            period = 300
+            period = 60
 
             print(
                 f"Playbook Task Downstream Request: Type -> Grafana, Datasource_Uid -> {datasource_uid}, "
@@ -218,7 +218,7 @@ class GrafanaSourceManager(PlaybookSourceManager):
 
             start_time_str = current_start_time.isoformat() + "Z"
             end_time_str = current_end_time.isoformat() + "Z"
-            period = 300
+            period = 60
 
             print(
                 f"Playbook Task Downstream Request: Type -> Grafana, Datasource_Uid -> {datasource_uid}, "

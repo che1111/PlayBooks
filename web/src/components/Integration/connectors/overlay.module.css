@@ -1,6 +1,6 @@
 .link {
   text-decoration: underline;
-  color: #9553fe;
+  color: #16edff;
 }
 
 div.ruleBox {
@@ -132,7 +132,7 @@ div.ruleBox {
 
 .metricLabelName {
   color: #ffffff;
-  background-color: #9553fe;
+  background-color: #16edff;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -174,8 +174,8 @@ div.ruleBox {
 }
 
 .submitButton {
-  color: #9553fe;
-  border: 1px solid #9553fe;
+  color: #16edff;
+  border: 1px solid #16edff;
   border-radius: 5px;
   padding-left: 12px;
   padding-right: 12px;
@@ -187,8 +187,8 @@ div.ruleBox {
 }
 
 .submitButtonRight {
-  color: #9553fe;
-  border: 1px solid #9553fe;
+  color: #16edff;
+  border: 1px solid #16edff;
   border-radius: 5px;
   padding-left: 12px;
   padding-right: 12px;
@@ -214,7 +214,7 @@ div.ruleBox {
 }
 
 .link {
-  color: #9553fe;
+  color: #16edff;
 }
 
 .addConditionStyle {
@@ -420,7 +420,7 @@ div.ruleBox {
 .config_panel__action__container .viz-button {
   background-color: #fff;
   border: 1px solid #9333ea;
-  color: #9554ff;
+  color: #1678ff;
   font-size: 14px;
   padding: 4px 12px;
   border-radius: 4px;
@@ -710,7 +710,7 @@ div.ruleBox {
   padding: 5px 5px 5px 5px;
   border: 1px solid #d3d3d3;
   border-radius: 5px;
-  background: #9553fe2e;
+  background: #16edff2e;
   cursor: pointer;
 }
 
@@ -812,7 +812,7 @@ div.ruleBox {
 
 .alert-tag {
   padding: 1px 5px 0px 5px;
-  background-color: #9553fe2e;
+  background-color: #16edff2e;
   color: #58595b;
   border-radius: 5px;
   font-size: 14px;

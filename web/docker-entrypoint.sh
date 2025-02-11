@@ -1,5 +1,5 @@
 #!/bin/sh
 set -e
 
-# Start nginx
-exec nginx -g "daemon off;"
+# Start OpenResty (Nginx with Lua)
+exec openresty -g 'daemon off;'

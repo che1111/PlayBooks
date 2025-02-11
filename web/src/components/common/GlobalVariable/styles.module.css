@@ -5,16 +5,16 @@
 
 .pb-button {
   margin-right: 5px;
-  border: 0.5px solid #9554ff;
+  border: 0.5px solid #1678ff;
   background-color: white;
   border-radius: 5px;
   font-size: 14px;
   padding: 2px 5px 2px 5px;
-  color: #9554ff;
+  color: #1678ff;
 }
 
 .pb-button:hover {
-  background-color: #9554ff;
+  background-color: #1678ff;
   color: white;
 }
 
@@ -95,8 +95,8 @@
 }
 
 .submitButton {
-  color: #9553fe;
-  border: 1px solid #9553fe;
+  color: #16edff;
+  border: 1px solid #16edff;
   border-radius: 5px;
   padding-left: 12px;
   padding-right: 12px;
@@ -108,8 +108,8 @@
 }
 
 .submitButtonRight {
-  color: #9553fe;
-  border: 1px solid #9553fe;
+  color: #16edff;
+  border: 1px solid #16edff;
   border-radius: 5px;
   padding-left: 12px;
   padding-right: 12px;
