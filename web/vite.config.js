@@ -19,37 +19,37 @@ export default defineConfig({
     allowedHosts: true,
     proxy: {
       "/e/": {
-        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        target: "BE_URL",
         changeOrigin: true,
         secure: false,
       },
       "/accounts": {
-        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        target: "BE_URL",
         changeOrigin: true,
         secure: false,
       },
       "/media": {
-        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        target: "BE_URL",
         changeOrigin: true,
         secure: false,
       },
       "/connectors/": {
-        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        target: "BE_URL",
         changeOrigin: true,
         secure: false,
       },
       "/pb/": {
-        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        target: "BE_URL",
         changeOrigin: true,
         secure: false,
       },
       "/executor/": {
-        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        target: "BE_URL",
         changeOrigin: true,
         secure: false,
       },
       "/management": {
-        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        target: "BE_URL",
         changeOrigin: true,
         secure: false,
       },
