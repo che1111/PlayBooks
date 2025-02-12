@@ -34,7 +34,7 @@ function AffectedPlaybooks({ id }) {
           <div
             key={playbook.playbook_id}
             onClick={(e) => navigateToPlaybook(e, playbook.playbook_id)}
-            className="bg-gray-200 p-1 text-xs rounded hover:bg-violet-500 hover:text-white !no-underline transition-all cursor-pointer">
+            className="bg-gray-200 p-1 text-xs rounded hover:bg-blue-500 hover:text-white !no-underline transition-all cursor-pointer">
             {playbook.playbook_name}
           </div>
         ))}
@@ -42,7 +42,7 @@ function AffectedPlaybooks({ id }) {
       {filteredData?.length !== data?.length && (
         <p
           onClick={handleClick}
-          className="text-xs text-violet-500 hover:underline cursor-pointer">
+          className="text-xs text-blue-500 hover:underline cursor-pointer">
           See More
         </p>
       )}

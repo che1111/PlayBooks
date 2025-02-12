@@ -22,7 +22,7 @@ function ResetPassword() {
           Ask your administrator to reset your password.
         </p>
         <CustomButton
-          className="!bg-violet-500 !text-white !text-sm w-full !justify-center hover:!bg-transparent hover:!text-violet-500 p-2 font-normal"
+          className="!bg-blue-500 !text-white !text-sm w-full !justify-center hover:!bg-transparent hover:!text-blue-500 p-2 font-normal"
           onClick={goToLogin}>
           <ChevronLeftRounded /> Back to Login
         </CustomButton>

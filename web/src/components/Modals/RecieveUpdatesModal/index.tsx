@@ -42,7 +42,7 @@ const RecieveUpdatesModal = ({ isOpen, close }) => {
           <div className="flex items-center gap-2 mt-4">
             <CustomButton
               onClick={handleYes}
-              className="!bg-violet-500 !text-white hover:!text-violet-500 hover:!bg-transparent">
+              className="!bg-blue-500 !text-white hover:!text-blue-500 hover:!bg-transparent">
               Yes Please!
             </CustomButton>
             <CustomButton onClick={handleNo}>No thanks</CustomButton>

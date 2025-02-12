@@ -24,7 +24,7 @@ function Step({ id }: StepProps) {
 
       <div className="flex flex-col gap-1 mt-4">
         {step.ui_requirement.showOutput && (
-          <p className={"text-sm my-1 text-violet-500"}>
+          <p className={"text-sm my-1 text-blue-500"}>
             <b>Output</b>
           </p>
         )}

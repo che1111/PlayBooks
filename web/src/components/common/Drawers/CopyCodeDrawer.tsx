@@ -20,7 +20,7 @@ function CopyCodeDrawer({ content, language, title, subtitle, help }) {
         </div>
         <CopyCode content={content} language={language} />
         {help && (
-          <div className="mt-4 rounded border p-2 border-violet-500 bg-violet-50">
+          <div className="mt-4 rounded border p-2 border-blue-500 bg-blue-50">
             {help}
           </div>
         )}

@@ -83,7 +83,7 @@ const SlackIntegration = () => {
         {loading && <CircularProgress />}
       </div>
       <button
-        className="text-xs bg-white hover:bg-violet-500 hover:color-white-500 py-1 px-1 border border-gray-400 rounded shadow"
+        className="text-xs bg-white hover:bg-blue-500 hover:color-white-500 py-1 px-1 border border-gray-400 rounded shadow"
         onClick={handleSave}
         style={{
           marginLeft: "12px",

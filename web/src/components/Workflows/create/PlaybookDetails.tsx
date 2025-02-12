@@ -26,7 +26,7 @@ function PlaybookDetails() {
           href="/playbooks/create"
           rel="noreferrer"
           target="_blank"
-          className="border border-violet-500 p-1 rounded text-violet-500 hover:bg-violet-500 hover:text-white transition-all text-xs">
+          className="border border-blue-500 p-1 rounded text-blue-500 hover:bg-blue-500 hover:text-white transition-all text-xs">
           + Create New
         </a>
       </label>

@@ -9,7 +9,7 @@ function RadioOptions({ options, handleSelect, selectedId }) {
           onClick={(e) => handleSelect(option)}
           className={`${
             selectedId === option.id
-              ? "!bg-white !text-violet-500 border-violet-500"
+              ? "!bg-white !text-blue-500 border-blue-500"
               : "text-gray-500 bg-gray-50 border-gray-200"
           } p-2 text-sm hover:bg-gray-100 cursor-pointer transition-all rounded border`}>
           {option.label}

@@ -34,7 +34,7 @@ const DynamicAlertsTable = ({ data }) => {
               <TableCell component="td" scope="row">
                 <Link
                   to={`/dynamic-alerts/${item.id}`}
-                  className="text-violet-500 underline">
+                  className="text-blue-500 underline">
                   {item.name}
                 </Link>
               </TableCell>

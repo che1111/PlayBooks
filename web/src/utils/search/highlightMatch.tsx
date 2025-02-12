@@ -9,7 +9,7 @@ export const highlightMatch = (string: string, value: string) => {
           key={index}
           className={
             part.toLowerCase() === value.toLowerCase()
-              ? "text-violet-500"
+              ? "text-blue-500"
               : undefined
           }>
           {part}

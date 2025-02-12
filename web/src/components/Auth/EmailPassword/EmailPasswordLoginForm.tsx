@@ -115,7 +115,7 @@ function EmailPasswordLoginForm() {
       </div>
 
       <CustomButton
-        className="!bg-violet-500 !text-white !text-sm w-full !justify-center hover:!bg-transparent hover:!text-violet-500 p-2 font-normal"
+        className="!bg-blue-500 !text-white !text-sm w-full !justify-center hover:!bg-transparent hover:!text-blue-500 p-2 font-normal"
         onClick={handleSubmit}>
         {isLoading ? (
           <CircularProgress style={{ color: "inherit !important" }} size={20} />

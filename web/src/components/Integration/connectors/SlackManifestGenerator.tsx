@@ -34,7 +34,7 @@ function SlackManifestGenerator() {
         onSubmit={handleSubmit}
         className="flex my-2 items-end gap-2 flex-wrap">
         <div className="flex items-center gap-2">
-          <button className="p-1 text-violet-500 hover:text-white hover:bg-violet-500 border border-violet-500 text-xs rounded cursor-pointer transition-all">
+          <button className="p-1 text-blue-500 hover:text-white hover:bg-blue-500 border border-blue-500 text-xs rounded cursor-pointer transition-all">
             Get Manifest
           </button>
 
@@ -50,7 +50,7 @@ function SlackManifestGenerator() {
             <>
               Read more in our{" "}
               <a
-                className="underline text-violet-500"
+                className="underline text-blue-500"
                 href="https://docs.drdroid.io/docs/setting-up-slack-alert-enrichment-on-self-hosted-playbooks#setup-your-slack-integration"
                 target="_blank"
                 rel="noreferrer">
@@ -65,7 +65,7 @@ function SlackManifestGenerator() {
 
       <hr />
 
-      <div className="bg-gray-100 rounded my-2 text-sm p-2 text-violet-500 flex items-center gap-2 font-semibold">
+      <div className="bg-gray-100 rounded my-2 text-sm p-2 text-blue-500 flex items-center gap-2 font-semibold">
         <InfoOutlined /> After the slack app is created, share the following
       </div>
     </main>

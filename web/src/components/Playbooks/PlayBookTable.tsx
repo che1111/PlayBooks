@@ -50,7 +50,7 @@ const PlaybookTable = ({ data, refreshTable }) => {
     name: (
       <Link
         to={`/playbooks/${item.id}`}
-        className="text-violet-500 hover:text-violet-800 transition-all">
+        className="text-blue-500 hover:text-blue-800 transition-all">
         {item.name}
       </Link>
     ),

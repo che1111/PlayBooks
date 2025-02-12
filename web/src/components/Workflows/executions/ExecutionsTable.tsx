@@ -35,14 +35,14 @@ const ExecutionsTable = ({ data }) => {
               <TableCell component="th" scope="row">
                 <Link
                   to={`/workflows/logs/${item.workflow_run_id}`}
-                  className="text-violet-500 underline">
+                  className="text-blue-500 underline">
                   {item.workflow_run_id}
                 </Link>
               </TableCell>
               <TableCell component="td" scope="row">
                 <Link
                   to={`/workflows/${item.workflow.id}`}
-                  className="text-violet-500 underline">
+                  className="text-blue-500 underline">
                   {item.workflow?.name}
                 </Link>
               </TableCell>

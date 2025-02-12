@@ -60,7 +60,7 @@ function AddNotification() {
 
   return (
     <div className="flex flex-col gap-1 border p-2 rounded">
-      <p className="font-bold text-violet-500 text-sm">Notification</p>
+      <p className="font-bold text-blue-500 text-sm">Notification</p>
       <div className="flex items-center gap-1">
         <CustomInput
           inputType={InputTypes.DROPDOWN}

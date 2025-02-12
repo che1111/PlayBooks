@@ -45,7 +45,7 @@ const WorkflowExecutions = () => {
       <main className="p-2">
         <button
           onClick={() => navigate(-1)}
-          className="p-1 text-sm border border-violet-500 rounded my-2 text-violet-500 flex items-center cursor-pointer hover:text-white hover:bg-violet-500 transition-all">
+          className="p-1 text-sm border border-blue-500 rounded my-2 text-blue-500 flex items-center cursor-pointer hover:text-white hover:bg-blue-500 transition-all">
           <ChevronLeft /> All Workflows
         </button>
         <SuspenseLoader loading={isFetching} loader={<TableSkeleton />}>

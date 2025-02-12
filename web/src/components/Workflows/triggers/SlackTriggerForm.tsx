@@ -87,7 +87,7 @@ function SlackTriggerForm() {
       </div>
       <button
         onClick={handleSubmit}
-        className="text-xs bg-transparent hover:bg-violet-500 p-1 border-violet-500 border hover:text-white text-violet-500 rounded transition-all">
+        className="text-xs bg-transparent hover:bg-blue-500 p-1 border-blue-500 border hover:text-white text-blue-500 rounded transition-all">
         Search
       </button>
       <AlertsDrawer />

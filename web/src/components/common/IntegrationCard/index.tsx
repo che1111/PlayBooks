@@ -37,7 +37,7 @@ function IntegrationCard({ data }) {
         target={data?.status === "request" ? "_blank" : "_self"}
         rel="noreferrer">
         <CustomButton
-          className="w-full rounded-none rounded-b !text-base justify-center border-none !bg-gray-100 py-2 hover:!bg-violet-500"
+          className="w-full rounded-none rounded-b !text-base justify-center border-none !bg-gray-100 py-2 hover:!bg-blue-500"
           onClick={handleClick}>
           {capitalizeFirstLetter(data.buttonText.toLowerCase())}
         </CustomButton>

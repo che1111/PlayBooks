@@ -28,10 +28,10 @@ function HandleWorkflowType() {
         return (
           <div className="flex flex-col gap-2 lg:w-1/2">
             <CopyCode content={currentWorkflow.curl} language={"curl"} />
-            <p className="text-sm p-2 border border-violet-500 bg-violet-50 rounded">
+            <p className="text-sm p-2 border border-blue-500 bg-blue-50 rounded">
               Convert this curl into any language of your choice using{" "}
               <a
-                className="underline text-violet-500"
+                className="underline text-blue-500"
                 href="https://curlconverter.com/"
                 target="_blank"
                 rel="noreferrer">

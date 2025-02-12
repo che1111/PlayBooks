@@ -51,7 +51,7 @@ export const useWorkflowsData = (data: any[], refreshTable: () => void) => {
     name: (
       <Link
         to={`/workflows/${item.id}`}
-        className="text-violet-500 hover:text-violet-800 transition-all">
+        className="text-blue-500 hover:text-blue-800 transition-all">
         {item.name}
       </Link>
     ),

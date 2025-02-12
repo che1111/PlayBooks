@@ -40,7 +40,7 @@ function TaskNode({ taskId }) {
       <div
         onClick={handleClick}
         className={`${
-          currentVisibleTask === taskId ? "border-violet-500 border-2" : ""
+          currentVisibleTask === taskId ? "border-blue-500 border-2" : ""
         } rounded-md overflow-hidden border-2 border-transparent`}
         style={{ borderColor: handleTaskBorderColor(taskId) }}>
         <div className="">

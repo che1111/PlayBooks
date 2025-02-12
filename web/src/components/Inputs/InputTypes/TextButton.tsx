@@ -26,7 +26,7 @@ function TextButton({
   };
 
   const isButtonText = buttonClickValue === props.value;
-  const buttonClassName = isButtonText ? "!bg-violet-500 !text-white" : "";
+  const buttonClassName = isButtonText ? "!bg-blue-500 !text-white" : "";
 
   return (
     <div className="flex flex-wrap">

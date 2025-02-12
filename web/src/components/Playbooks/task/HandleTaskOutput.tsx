@@ -16,7 +16,7 @@ function HandleTaskOutput({ showHeading, task, output }) {
             {Object.entries(output?.data?.task_local_variable_set ?? {}).map(
               ([key, value]) => (
                 <p className="text-xs my-1 flex items-center border-r pr-2">
-                  <span className="bg-violet-100 rounded p-1">{key}</span> :{" "}
+                  <span className="bg-blue-100 rounded p-1">{key}</span> :{" "}
                   {value as string}
                 </p>
               ),

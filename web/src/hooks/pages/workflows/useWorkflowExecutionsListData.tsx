@@ -49,14 +49,14 @@ export const useWorkflowExecutionsListData = (data: any[]) => {
     runId: (
       <Link
         to={`/workflows/logs/${item.workflow_run_id}`}
-        className="text-violet-500 hover:text-violet-800 transition-all">
+        className="text-blue-500 hover:text-blue-800 transition-all">
         {item.workflow_run_id}
       </Link>
     ),
     workflow: (
       <Link
         to={`/workflows/${item.workflow?.id}`}
-        className="text-violet-500 hover:text-violet-800 transition-all">
+        className="text-blue-500 hover:text-blue-800 transition-all">
         {item.workflow?.name}
       </Link>
     ),

@@ -19,7 +19,7 @@ export const scheduleOptions = [
               href="https://crontab.guru/#*/2_*_*_*_*"
               rel="noreferrer"
               target="_blank"
-              className="text-violet-500">
+              className="text-blue-500">
               Docs
             </a>
             )

@@ -41,7 +41,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
             className={`${isSmall ? "w-4 h-4" : "w-5 h-5"} ${
               disabled ? "bg-gray-200" : ""
             } inline-block rounded border transition duration-300 ease-in-out ${
-              isChecked ? "bg-violet-500 border-violet-500" : "border-gray-300"
+              isChecked ? "bg-blue-500 border-blue-500" : "border-gray-300"
             }`}>
             {isChecked && (
               <svg

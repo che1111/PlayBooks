@@ -28,7 +28,7 @@ function AddStepCondition() {
       <Tooltip title="Add a time condition to step execution">
         <InfoOutlined
           fontSize="small"
-          className="text-violet-500 cursor-pointer"
+          className="text-blue-500 cursor-pointer"
         />
       </Tooltip>
     </div>

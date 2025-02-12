@@ -20,7 +20,7 @@ function AddCondition() {
 
   return (
     <>
-      <h1 className="text-violet-500 font-semibold text-xs flex justify-between my-2">
+      <h1 className="text-blue-500 font-semibold text-xs flex justify-between my-2">
         <span>Add Condition</span>
       </h1>
       <hr />

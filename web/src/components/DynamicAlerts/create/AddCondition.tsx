@@ -27,7 +27,7 @@ function AddCondition() {
 
   return (
     <div className="flex flex-col gap-1 border p-2 rounded">
-      <p className="font-bold text-violet-500 text-sm">Conditions</p>
+      <p className="font-bold text-blue-500 text-sm">Conditions</p>
       {step_relations?.map((relation, i) => (
         <ConditionRuleSet ruleSetIndex={i} relationId={relation.id} key={i} />
       ))}

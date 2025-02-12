@@ -21,7 +21,7 @@ function HandleNotesRender({ id }) {
       {!isPrefetched ? (
         step.notes ? (
           <>
-            <div className="mt-2 text-sm cursor-pointer text-violet-500">
+            <div className="mt-2 text-sm cursor-pointer text-blue-500">
               <b>Notes</b>
             </div>
             <Notes id={id} />
@@ -29,7 +29,7 @@ function HandleNotesRender({ id }) {
         ) : (
           <>
             <div
-              className="mt-2 text-sm cursor-pointer text-violet-500 mb-2"
+              className="mt-2 text-sm cursor-pointer text-blue-500 mb-2"
               onClick={toggleNotes}>
               <b>{step.ui_requirement.showNotes ? "-" : "+"}</b> Add Notes about
               this step
@@ -40,7 +40,7 @@ function HandleNotesRender({ id }) {
       ) : (
         step.notes && (
           <>
-            <div className="mt-2 text-sm cursor-pointer text-violet-500">
+            <div className="mt-2 text-sm cursor-pointer text-blue-500">
               <b>Notes</b>
             </div>
             <Notes id={id} />

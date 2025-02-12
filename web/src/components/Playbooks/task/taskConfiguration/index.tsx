@@ -13,7 +13,7 @@ function TaskConfiguration({ id }: TaskConfigurationPropTypes) {
 
   return (
     <div>
-      <div className="mt-2 text-sm text-violet-500">
+      <div className="mt-2 text-sm text-blue-500">
         <b>Configuration</b>
       </div>
       <div className="flex flex-col gap-2 mt-2">

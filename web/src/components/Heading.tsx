@@ -22,7 +22,7 @@ const Heading = ({ subHeading = "", heading }) => {
         <div className="flex gap-2 items-center">
           {/* {isOnPlaybookPage && (
             <div
-              className="cursor-pointer text-xl font-bold hover:text-violet-500 transition-all"
+              className="cursor-pointer text-xl font-bold hover:text-blue-500 transition-all"
               onClick={goBack}>
               <HomeRounded />
             </div>

@@ -42,7 +42,7 @@ function Transformer() {
           <br />
           For API Triggers, see{" "}
           <a
-            className="text-violet-500 underline"
+            className="text-blue-500 underline"
             href="https://docs.drdroid.io/docs/api-triggers#custom-parameters"
             target="_blank"
             rel="noreferrer">

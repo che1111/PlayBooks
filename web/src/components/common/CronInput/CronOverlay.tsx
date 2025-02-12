@@ -29,7 +29,7 @@ const CronOverlay = ({ isOpen, close, value, setValue }: CronOverlayProps) => {
                 className="w-full"
                 containerClassName="w-full"
               />
-              <p className="text-xs flex items-center gap-2 text-violet-500">
+              <p className="text-xs flex items-center gap-2 text-blue-500">
                 <hr className="w-full" />
                 OR
                 <hr className="w-full" />
@@ -56,7 +56,7 @@ const CronOverlay = ({ isOpen, close, value, setValue }: CronOverlayProps) => {
                 className="text-xs"
                 clearButtonProps={{
                   className:
-                    "!bg-violet-500 hover:!text-violet-500 hover:!bg-white border border-violet-500 !text-xs !p-1",
+                    "!bg-blue-500 hover:!text-blue-500 hover:!bg-white border border-blue-500 !text-xs !p-1",
                 }}
               />
             </div>

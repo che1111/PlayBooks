@@ -57,7 +57,7 @@ function StepConfig({ step, index }: StepConfigPropTypes) {
     <div ref={scrollRef} className="border rounded p-1 bg-gray-100 h-full">
       <div className="flex items-center justify-between">
         <div className="flex flex-col px-1">
-          <h2 className="text-violet-500 text-sm font-bold">Step</h2>
+          <h2 className="text-blue-500 text-sm font-bold">Step</h2>
           <div className="flex gap-2 items-center flex-wrap">
             <h1 className="font-semibold text-lg line-clamp-3">
               {step.description}
@@ -65,7 +65,7 @@ function StepConfig({ step, index }: StepConfigPropTypes) {
           </div>
         </div>
         <div className="flex flex-col mr-2">
-          <h2 className="text-violet-500 text-sm font-bold">Executed At</h2>
+          <h2 className="text-blue-500 text-sm font-bold">Executed At</h2>
           <p className="text-gray-500 italic text-sm">
             {stepTasks?.[0]?.ui_requirement?.outputs?.[0]?.data?.timestamp &&
               renderTimestamp(
@@ -85,14 +85,14 @@ function StepConfig({ step, index }: StepConfigPropTypes) {
 
       {step.notes && (
         <div className="flex flex-wrap flex-col mt-1">
-          <h2 className="text-violet-500 text-sm font-bold">Notes</h2>
+          <h2 className="text-blue-500 text-sm font-bold">Notes</h2>
           <MarkdownOutput content={step.notes} />
         </div>
       )}
 
       {(step?.external_links?.length ?? 0) > 0 && (
         <div className="flex gap-1 flex-wrap flex-col mt-1">
-          <h2 className="text-violet-500 text-sm font-bold">External Links</h2>
+          <h2 className="text-blue-500 text-sm font-bold">External Links</h2>
           <ExternalLinksList id={step.id} />
         </div>
       )}

@@ -49,7 +49,7 @@ function Condition({
 
   return (
     <div key={i} className="mt-2 border p-1 rounded-md flex flex-col gap-2">
-      <p className="text-xs text-violet-500 font-semibold">Condition-{i + 1}</p>
+      <p className="text-xs text-blue-500 font-semibold">Condition-{i + 1}</p>
       <div className="flex flex-col gap-2 flex-wrap">
         <div className="flex items-center gap-1">
           <CustomInput

@@ -30,7 +30,7 @@ function Config({ connector }) {
             <span>
               (
               <a
-                className="text-violet-500 cursor-pointer"
+                className="text-blue-500 cursor-pointer"
                 href={cardData?.docs}
                 target="_blank"
                 rel="noreferrer">

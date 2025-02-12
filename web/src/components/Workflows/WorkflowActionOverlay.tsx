@@ -31,12 +31,12 @@ const WorkflowActionOverlay = ({
             <header className="text-gray-500">Delete {workflow.name}?</header>
             <div className="flex gap-2 mt-4 mb-2">
               <button
-                className="rounded border border-violet-500 text-violet-500 hover:text-white hover:bg-violet-500 transition-all p-1"
+                className="rounded border border-blue-500 text-blue-500 hover:text-white hover:bg-blue-500 transition-all p-1"
                 onClick={toggleOverlay}>
                 Cancel
               </button>
               <button
-                className="rounded border border-violet-500 text-violet-500 hover:text-white hover:bg-violet-500 transition-all p-1"
+                className="rounded border border-blue-500 text-blue-500 hover:text-white hover:bg-blue-500 transition-all p-1"
                 onClick={handleSuccess}>
                 Yes
               </button>

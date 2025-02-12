@@ -10,7 +10,7 @@ const NoAPIKeys = () => {
         </div>
         <div>
           <Link to="https://docs.drdroid.io" target="_blank">
-            <div className="text-sm rounded-lg py-2 px-2 cursor-pointer border-violet-600 text-violet-600 dura hover:text-violet-700 underline flex">
+            <div className="text-sm rounded-lg py-2 px-2 cursor-pointer border-blue-600 text-blue-600 dura hover:text-blue-700 underline flex">
               Check Documentation
             </div>
           </Link>

@@ -46,7 +46,7 @@ function StepNode({ data }) {
           <Handle
             type="target"
             position={Position.Top}
-            className="!bg-white !w-5 !h-5 absolute !top-0 !transform !-translate-x-1/2 !-translate-y-1/2 !border-violet-500 !border-2"
+            className="!bg-white !w-5 !h-5 absolute !top-0 !transform !-translate-x-1/2 !-translate-y-1/2 !border-blue-500 !border-2"
           />
         )}
 
@@ -54,7 +54,7 @@ function StepNode({ data }) {
         <Handle
           type="source"
           position={Position.Bottom}
-          className="!bg-white !w-5 !h-5 absolute !bottom-0 !transform !-translate-x-1/2 !translate-y-1/2 !border-violet-500 !border-2"
+          className="!bg-white !w-5 !h-5 absolute !bottom-0 !transform !-translate-x-1/2 !translate-y-1/2 !border-blue-500 !border-2"
         />
         {/* )} */}
 

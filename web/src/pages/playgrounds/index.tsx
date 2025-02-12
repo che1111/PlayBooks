@@ -4,7 +4,7 @@ function Playgrounds() {
       <p className="mt-4">
         View our sample playbooks on our{" "}
         <a
-          className="text-violet-500 hover:underline"
+          className="text-blue-500 hover:underline"
           href="https://sandbox.drdroid.io/"
           target="_blank"
           rel="noreferrer">

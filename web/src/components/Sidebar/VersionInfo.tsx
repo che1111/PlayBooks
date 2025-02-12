@@ -17,7 +17,7 @@ function VersionInfo() {
       )}
       {data.should_upgrade && (
         <>
-          <p className="bg-violet-50 p-1 rounded overflow-hidden max-w-full">
+          <p className="bg-blue-50 p-1 rounded overflow-hidden max-w-full">
             <a
               href="https://github.com/DrDroidLab/PlayBooks/releases"
               target="_blank"

@@ -5,14 +5,54 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   base: "/",
   server: {
-    port: 3000,
+    port: 9235,
     watch: {
       usePolling: true,
     },
     host: true,
     strictPort: true,
-    hmr: {
-      clientPort: 3000,
+    cors: true,
+    // hmr: {
+    //   clientPort: 9235,
+    // },
+    hrm: false,
+    allowedHosts: true,
+    proxy: {
+      "/e/": {
+        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        changeOrigin: true,
+        secure: false,
+      },
+      "/accounts": {
+        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        changeOrigin: true,
+        secure: false,
+      },
+      "/media": {
+        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        changeOrigin: true,
+        secure: false,
+      },
+      "/connectors/": {
+        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        changeOrigin: true,
+        secure: false,
+      },
+      "/pb/": {
+        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        changeOrigin: true,
+        secure: false,
+      },
+      "/executor/": {
+        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        changeOrigin: true,
+        secure: false,
+      },
+      "/management": {
+        target: "https://8080-che1111-playbooks-qr956k6nf5q.ws-us117.gitpod.io",
+        changeOrigin: true,
+        secure: false,
+      },
     },
   },
   optimizeDeps: {

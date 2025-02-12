@@ -67,7 +67,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
                     </div>
                     <div>
                       <Link to="https://docs.drdroid.io" target="_blank">
-                        <div className="text-sm rounded-lg py-2 px-2 cursor-pointer border-violet-600 text-violet-500 hover:text-violet-800 transition-all flex">
+                        <div className="text-sm rounded-lg py-2 px-2 cursor-pointer border-blue-600 text-blue-500 hover:text-blue-800 transition-all flex">
                           Check Documentation
                         </div>
                       </Link>

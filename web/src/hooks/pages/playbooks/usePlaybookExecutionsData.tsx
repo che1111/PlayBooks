@@ -8,14 +8,14 @@ export const usePlaybookExecutionsData = (data: any[]) => {
     runId: (
       <Link
         to={`/playbooks/${item.playbook.id}?executionId=${item.playbook_run_id}`}
-        className="text-violet-500 hover:text-violet-800 transition-all">
+        className="text-blue-500 hover:text-blue-800 transition-all">
         {item.playbook_run_id}
       </Link>
     ),
     playbook: (
       <Link
         to={`/playbooks/${item.playbook.id}`}
-        className="text-violet-500 hover:text-violet-800 transition-all">
+        className="text-blue-500 hover:text-blue-800 transition-all">
         {item.playbook?.name}
       </Link>
     ),

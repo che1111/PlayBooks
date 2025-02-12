@@ -47,7 +47,7 @@ const SeeMoreTextWithoutModal: React.FC<SeeMoreTextWithoutModalProps> = ({
       {shouldTruncateByLength && showMoreText && (
         <button
           onClick={handleToggle}
-          className="text-violet-500 hover:underline mt-2">
+          className="text-blue-500 hover:underline mt-2">
           {expanded ? "See Less" : "See More"}
         </button>
       )}

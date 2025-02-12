@@ -42,7 +42,7 @@ const Code: React.FC<CodePropTypes> = ({ language = "json", content }) => {
         <ContentCopyRounded
           fontSize="small"
           onClick={handleCopy}
-          className="hover:text-violet-500 cursor-pointer transition-all"
+          className="hover:text-blue-500 cursor-pointer transition-all"
         />
       </div>
     </div>

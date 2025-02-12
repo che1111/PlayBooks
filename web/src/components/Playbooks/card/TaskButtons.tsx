@@ -16,7 +16,7 @@ function TaskButtons({ taskId }) {
     <div className="flex items-center gap-1 p-1">
       <CustomButton
         onClick={handleClick}
-        className="text-violet-500 cursor-pointer">
+        className="text-blue-500 cursor-pointer">
         <Tooltip title={"Show Config"}>
           <VisibilityRounded fontSize="medium" />
         </Tooltip>

@@ -12,14 +12,14 @@ function SignupAdditionalData() {
       <div className="text-xs text-center">
         By signing up, you are agreeing to our{" "}
         <Link
-          className="text-violet-500 hover:underline"
+          className="text-blue-500 hover:underline"
           target="_blank"
           to="https://docs.drdroid.io/docs/terms-of-use">
           terms
         </Link>
         <span> and </span>
         <Link
-          className="text-violet-500 hover:underline"
+          className="text-blue-500 hover:underline"
           target="_blank"
           to="https://docs.drdroid.io/docs/privacy-policy">
           privacy policy
@@ -30,7 +30,7 @@ function SignupAdditionalData() {
       {emailEnabled && (
         <div className="text-xs text-center">
           Already have an account?{" "}
-          <Link className="text-violet-500 hover:underline" to="/login">
+          <Link className="text-blue-500 hover:underline" to="/login">
             Sign in
           </Link>
         </div>

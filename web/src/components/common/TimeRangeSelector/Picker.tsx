@@ -64,12 +64,12 @@ function Picker({ type, label }) {
           }
           disabledDate={disabledDate}
           value={typeof timeRange[key] === "string" ? null : timeRange[key]}
-          className="!text-violet-500 !w-full"
+          className="!text-blue-500 !w-full"
         />
         {type === PickerType.TO && (
           <CustomButton
             className={`${
-              timeRange[key] === nowKey ? "!bg-violet-500 !text-white" : ""
+              timeRange[key] === nowKey ? "!bg-blue-500 !text-white" : ""
             }`}
             onClick={setNow}>
             Now

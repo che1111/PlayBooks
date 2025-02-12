@@ -45,8 +45,8 @@ function DateInput({
       }
       className={`${className} ${
         error ? "border-red-500" : ""
-      } !text-violet-500 !w-full !rounded !border min-w-[220px] hover:!border-violet-500`}
-      menuClassName="!z-[90] text-violet-500 bg-violet-500 !rounded"
+      } !text-blue-500 !w-full !rounded !border min-w-[220px] hover:!border-blue-500`}
+      menuClassName="!z-[90] text-blue-500 bg-blue-500 !rounded"
     />
   );
 }

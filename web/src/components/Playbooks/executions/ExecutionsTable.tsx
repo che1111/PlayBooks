@@ -36,14 +36,14 @@ const ExecutionsTable = ({ data }) => {
               <TableCell component="td" scope="row">
                 <Link
                   to={`/playbooks/${item.playbook.id}?executionId=${item.playbook_run_id}`}
-                  className="text-violet-500 underline">
+                  className="text-blue-500 underline">
                   {item.playbook_run_id}
                 </Link>
               </TableCell>
               <TableCell component="td" scope="row">
                 <Link
                   to={`/playbooks/${item.playbook.id}`}
-                  className="text-violet-500 underline">
+                  className="text-blue-500 underline">
                   {item.playbook?.name}
                 </Link>
               </TableCell>

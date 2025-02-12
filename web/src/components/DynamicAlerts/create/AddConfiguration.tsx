@@ -10,7 +10,7 @@ function AddConfiguration() {
 
   return (
     <div className="flex flex-col gap-1 border p-2 rounded">
-      <p className="font-bold text-violet-500 text-sm">Configuration</p>
+      <p className="font-bold text-blue-500 text-sm">Configuration</p>
       <CustomInput
         inputType={InputTypes.TEXT}
         label="Evaluation Window (in minutes)"

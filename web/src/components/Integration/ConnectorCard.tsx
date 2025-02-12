@@ -51,13 +51,13 @@ function ConnectorCard({ connector }: ConnectorCardPropTypes) {
       <div className="flex gap-2">
         <button
           onClick={handleDelete}
-          className="flex gap-1 items-center text-sm bg-white hover:bg-violet-500 text-violet-500 hover:text-white rounded p-1 border border-violet-500 shrink-0 font-medium transition-all">
+          className="flex gap-1 items-center text-sm bg-white hover:bg-blue-500 text-blue-500 hover:text-white rounded p-1 border border-blue-500 shrink-0 font-medium transition-all">
           <Delete />
         </button>
 
         <Link
           to={`/data-sources/${connector.enum.toLowerCase()}/${connector.id}`}
-          className="flex gap-1 items-center text-sm bg-white hover:bg-violet-500 text-violet-500 hover:text-white rounded p-1 border border-violet-500 shrink-0 font-medium transition-all">
+          className="flex gap-1 items-center text-sm bg-white hover:bg-blue-500 text-blue-500 hover:text-white rounded p-1 border border-blue-500 shrink-0 font-medium transition-all">
           View
         </Link>
       </div>

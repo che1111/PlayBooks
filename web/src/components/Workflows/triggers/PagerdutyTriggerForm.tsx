@@ -12,7 +12,7 @@ function PagerdutyTriggerForm() {
     <div className="flex flex-col gap-2 items-start max-full rounded bg-gray-50 p-2">
       {currentWorkflow.webhook && (
         <div className="flex flex-col gap-2 lg:w-1/2">
-          <p className="text-sm p-2 border border-violet-500 bg-violet-50 rounded">
+          <p className="text-sm p-2 border border-blue-500 bg-blue-50 rounded">
             Add these Webhook details in your PagerDuty Generic Webhook(V3)
             page.
           </p>

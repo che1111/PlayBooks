@@ -41,7 +41,7 @@ export const useDynamicAlertsData = (data: any[]) => {
     name: (
       <Link
         to={`/dynamic-alerts/${item.id}`}
-        className="text-violet-500 hover:text-violet-800 transition-all">
+        className="text-blue-500 hover:text-blue-800 transition-all">
         {item.name}
       </Link>
     ),

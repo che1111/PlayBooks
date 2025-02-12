@@ -43,7 +43,7 @@ function NotificationDetails() {
           }}
           className={`${
             currentWorkflow.notification === option.id
-              ? "!bg-white !text-violet-500 border-violet-500"
+              ? "!bg-white !text-blue-500 border-blue-500"
               : "text-gray-500 bg-gray-50 border-gray-200"
           } ${index === options?.length - 1 ? "rounded-r" : ""} ${
             index === 0 ? "rounded-l" : ""

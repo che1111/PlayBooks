@@ -25,7 +25,7 @@ function AddMetric() {
 
   return (
     <div className="flex flex-col gap-1 border p-2 rounded">
-      <p className="font-bold text-violet-500 text-sm">Metric</p>
+      <p className="font-bold text-blue-500 text-sm">Metric</p>
       <div className="flex w-full gap-4 justify-start">
         <div className="flex flex-col flex-[0.5]">
           <AddMetricSource id={currentTask.id} />

@@ -53,7 +53,7 @@ function GlobalVariables() {
         {globalVariables?.length > 0 ? (
           globalVariables.map((key) => (
             <div key={key} className={`flex gap-1 flex-wrap p-1`}>
-              <div className="bg-violet-100 p-1 flex items-center rounded w-[80px]">
+              <div className="bg-blue-100 p-1 flex items-center rounded w-[80px]">
                 <Tooltip title={key}>
                   <p className="text-xs text-center text-ellipsis overflow-hidden">
                     {key}
@@ -87,7 +87,7 @@ function GlobalVariables() {
               href="https://docs.drdroid.io/docs/global-variables"
               target="_blank"
               rel="noreferrer"
-              className="text-violet-600">
+              className="text-blue-600">
               here
             </a>
             .

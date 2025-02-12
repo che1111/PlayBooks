@@ -13,7 +13,7 @@ function GlobalRule() {
 
   return (
     <div className="flex flex-col items-start gap-1">
-      <p className="text-xs text-violet-500 font-semibold">
+      <p className="text-xs text-blue-500 font-semibold">
         Select a global rule
       </p>
       <CustomInput

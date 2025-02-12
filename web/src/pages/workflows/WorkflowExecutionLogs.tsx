@@ -37,7 +37,7 @@ const WorkflowExecutionLogs = () => {
         <div className="flex items-center justify-between">
           <button
             onClick={() => navigate(-1)}
-            className="p-1 text-sm border border-violet-500 rounded text-violet-500 flex items-center cursor-pointer hover:text-white hover:bg-violet-500 transition-all">
+            className="p-1 text-sm border border-blue-500 rounded text-blue-500 flex items-center cursor-pointer hover:text-white hover:bg-blue-500 transition-all">
             <ChevronLeft /> All Workflows
           </button>
         </div>

@@ -14,7 +14,7 @@ function ExternalLinksList({ id }) {
           href={link.url}
           target="_blank"
           rel="noreferrer"
-          className="flex flex-wrap items-center text-sm gap-1 text-violet-500 hover:underline">
+          className="flex flex-wrap items-center text-sm gap-1 text-blue-500 hover:underline">
           {link?.name || link.url} <Launch />
         </a>
       ))}

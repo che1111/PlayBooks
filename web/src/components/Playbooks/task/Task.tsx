@@ -28,7 +28,7 @@ function Task({ id }) {
       <div className="flex flex-col">
         <div>
           <div
-            className="mt-2 text-sm cursor-pointer text-violet-500"
+            className="mt-2 text-sm cursor-pointer text-blue-500"
             onClick={() => setAddQuery(true)}>
             <b>{!addQuery ? "+ Add Data" : "Data"}</b>
           </div>
@@ -41,7 +41,7 @@ function Task({ id }) {
           <div className="flex gap-2 mt-2">
             <RunButton id={currentTaskId ?? ""} />
             <button
-              className="text-xs bg-white hover:text-white hover:bg-violet-500 text-violet-500 hover:color-white-500 p-1 border border-violet-500 transition-all rounded"
+              className="text-xs bg-white hover:text-white hover:bg-blue-500 text-blue-500 hover:color-white-500 p-1 border border-blue-500 transition-all rounded"
               onClick={handleDeleteClick}>
               <Tooltip title="Remove this Step">
                 <Delete />

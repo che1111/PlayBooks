@@ -19,7 +19,7 @@ function GlobalVariablesList({
       <div className="flex flex-wrap gap-2">
         {variables.map(([key, value]) => (
           <Tooltip title={value} key={key}>
-            <div className="text-xs bg-violet-50 p-1 rounded cursor-default">
+            <div className="text-xs bg-blue-50 p-1 rounded cursor-default">
               {key}
             </div>
           </Tooltip>

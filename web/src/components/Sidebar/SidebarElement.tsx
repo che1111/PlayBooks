@@ -19,7 +19,7 @@ function SidebarElement({ to, label, icon }: SidebarElementProps) {
       <div
         className={`flex gap-2 py-1 pl-2 items-center w-full rounded ${
           isActive
-            ? "bg-violet-50 text-violet-500"
+            ? "bg-blue-50 text-blue-500"
             : "text-gray-500 hover:bg-gray-50"
         }`}>
         <div className="">{icon}</div>
@@ -28,7 +28,7 @@ function SidebarElement({ to, label, icon }: SidebarElementProps) {
       {isActive && (
         <motion.div
           layoutId="sidebar-indicator"
-          className="absolute left-2 h-[70%] w-1 bg-violet-500 rounded"
+          className="absolute left-2 h-[70%] w-1 bg-blue-500 rounded"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}

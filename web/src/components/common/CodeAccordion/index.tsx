@@ -42,7 +42,7 @@ const CodeAccordion = forwardRef<HTMLDivElement, CodeAccordionPropTypes>(
       <div ref={ref}>
         <p
           onClick={toggle}
-          className="font-semibold text-violet-500 text-xs transition-all cursor-pointer flex items-center">
+          className="font-semibold text-blue-500 text-xs transition-all cursor-pointer flex items-center">
           <KeyboardArrowDown
             className={`${isOpen ? "rotate-180" : "rotate-0"} !transition-all`}
             fontSize="small"

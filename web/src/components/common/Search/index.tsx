@@ -25,7 +25,7 @@ const Search = ({ context }: SearchProps) => {
         </div>
         <CustomButton
           onClick={clear}
-          className="bg-violet-500 flex items-center p-1 rounded-none rounded-r cursor-pointer text-xs font-medium">
+          className="bg-blue-500 flex items-center p-1 rounded-none rounded-r cursor-pointer text-xs font-medium">
           Clear
         </CustomButton>
       </div>

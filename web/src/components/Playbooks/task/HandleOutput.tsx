@@ -25,11 +25,11 @@ function HandleOutput({
       {showOutput && (
         <>
           {showHeading ? (
-            <p className={"text-sm my-2 text-violet-500"}>
+            <p className={"text-sm my-2 text-blue-500"}>
               <b>Output</b>
             </p>
           ) : (
-            <p className={"text-sm my-1 text-violet-500"}>
+            <p className={"text-sm my-1 text-blue-500"}>
               <b>{task?.description}</b>
             </p>
           )}

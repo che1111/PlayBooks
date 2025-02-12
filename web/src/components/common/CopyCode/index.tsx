@@ -23,7 +23,7 @@ function CopyCode({ content, language }) {
       <div className="w-full flex mb-2 justify-end">
         <button
           onClick={handleCopy}
-          className="border bg-white rounded p-1 text-xs font-bold flex gap-1 items-center cursor-pointer hover:border-violet-500 hover:text-violet-500 transition-all">
+          className="border bg-white rounded p-1 text-xs font-bold flex gap-1 items-center cursor-pointer hover:border-blue-500 hover:text-blue-500 transition-all">
           <ContentCopy fontSize="small" />
           Copy Code
         </button>

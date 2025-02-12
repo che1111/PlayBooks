@@ -47,8 +47,8 @@ const ActionButton: React.FC<ActionButtonProps> = ({ actions, row }) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         className={`${
-          isOpen ? "text-violet-500" : ""
-        } flex items-center justify-center p-1 cursor-pointer text-gray-700 hover:text-violet-500`}>
+          isOpen ? "text-blue-500" : ""
+        } flex items-center justify-center p-1 cursor-pointer text-gray-700 hover:text-blue-500`}>
         <MoreVertIcon color="inherit" />
       </div>
       {isOpen &&
@@ -69,7 +69,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({ actions, row }) => {
                 <button
                   key={index}
                   onClick={() => action.action(row)}
-                  className="w-full flex items-center px-2 py-1 text-xs text-gray-700 hover:bg-violet-50 hover:text-violet-500 focus:outline-none rounded">
+                  className="w-full flex items-center px-2 py-1 text-xs text-gray-700 hover:bg-blue-50 hover:text-blue-500 focus:outline-none rounded">
                   {action.icon}
                   <span className="ml-2 text-left">{action.label}</span>
                 </button>

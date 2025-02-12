@@ -30,12 +30,12 @@ function HandleExternalLinksRender({ id }) {
   return (
     <>
       {(step?.external_links?.length ?? 0) > 0 ? (
-        <div className="mt-2 text-sm cursor-pointer text-violet-500">
+        <div className="mt-2 text-sm cursor-pointer text-blue-500">
           <b>External Links</b>
         </div>
       ) : (
         <div
-          className="mt-2 text-sm cursor-pointer text-violet-500"
+          className="mt-2 text-sm cursor-pointer text-blue-500"
           onClick={toggleExternalLinks}>
           <b>{step?.ui_requirement.showExternalLinks ? "-" : "+"}</b> Add
           External Links

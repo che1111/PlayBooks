@@ -50,7 +50,7 @@ function HeadingTitle({ heading }: HeadingTitleProps) {
         </div>
       )}
       {isOnPlaybookPage && !isPrefetched && (
-        <button className="ml-2 text-xs bg-white hover:text-white hover:bg-violet-500 text-violet-500 hover:color-white-500 p-1 border border-violet-500 transition-all rounded">
+        <button className="ml-2 text-xs bg-white hover:text-white hover:bg-blue-500 text-blue-500 hover:color-white-500 p-1 border border-blue-500 transition-all rounded">
           <div className="icon" onClick={() => setShowEdit(!showEdit)}>
             {showEdit ? <Check /> : <Edit />}
           </div>
