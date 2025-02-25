@@ -6,9 +6,9 @@ if not token then
     local http = require("resty.http")
     local httpc = http.new()
 
-    local res, err = httpc:request_uri("{BE_URL}", {
+    local res, err = httpc:request_uri("{https://glowing-fortnight-qgq6j5r55prc4vg-8080.app.github.dev}", {
         method = "POST",
-        body = '{"email": "{EMAIL}","password": "{PASSWORD}"}',
+        body = '{"email": "{phanhai675@gmail.com}","password": "{Hai02052001@}"}',
         headers = {
             ["Content-Type"] = "application/json",
         },
