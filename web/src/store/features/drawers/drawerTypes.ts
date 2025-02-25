@@ -5,5 +5,6 @@ export const DrawerTypes = {
   ADD_DATA_SOURCES: "add_data_sources",
   ALERTS: "alerts",
   CONDITION: "add_condition",
+  ADD_VARIABLES: "add_variables",
   DEFAULT: "default",
 } as const;
