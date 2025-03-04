@@ -12,6 +12,13 @@ export const processData = (tsData: any, result: any) => {
     );
   }
 
+  let uniqueTimestamps = new Set<number>();
+  sortedTSData.forEach((series: any) => {
+    series.datapoints.forEach((dp: any) => uniqueTimestamps.add(parseInt(dp.timestamp)));
+  });
+
+  let sortedTimestamps = Array.from(uniqueTimestamps).sort((a, b) => a - b);
+
   let tsLabels = sortedTSData.map((x: any) => {
     const offsetSeconds = x?.metric_label_values?.find(
       (e) => e.name === "offset_seconds",
@@ -26,11 +33,14 @@ export const processData = (tsData: any, result: any) => {
 
   let data: any[] = [];
   for (let j = 0; j < sortedTSData.length; j++) {
-    data.push({
-      ts: sortedTSData[j].datapoints.map((ts: any) => {
-        return parseFloat(ts?.value?.toFixed(2));
-      }),
-      label: sortedTSData[j].label,
+    let series = sortedTSData[j];
+    let datapointsMap = new Map(
+      series.datapoints.map((dp: any) => [parseInt(dp.timestamp), parseFloat(dp.value.toFixed(2))])
+    );
+    let alignedValues = sortedTimestamps.map((ts) => datapointsMap.get(ts) ?? null);
+     data.push({
+      ts: alignedValues, // Filled with actual values or null
+      label: tsLabels[j], // Assign label
     });
   }
 
