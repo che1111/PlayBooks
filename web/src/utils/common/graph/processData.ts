@@ -19,27 +19,32 @@ export const processData = (tsData: any, result: any) => {
 
   let sortedTimestamps = Array.from(uniqueTimestamps).sort((a, b) => a - b);
 
-  let tsLabels = sortedTSData.map((x: any) => {
-    const offsetSeconds = x?.metric_label_values?.find(
-      (e) => e.name === "offset_seconds",
-    );
-    const seconds = parseInt(offsetSeconds?.value ?? "0", 10);
-    const labelAppendValue = seconds === 0 ? "Current" : timeAgo(seconds);
-    return `${
-      result?.timeseries?.metric_expression ??
-      getTSLabel(x?.metric_label_values ?? [])
-    } - ${labelAppendValue}`;
-  });
+ let tsLabels = sortedTSData.map((x: any) => {
+  const offsetSeconds = x?.metric_label_values?.find(
+    (e) => e.name === "offset_seconds"
+  );
+  const seconds = parseInt(offsetSeconds?.value ?? "0", 10);
+  const labelAppendValue = seconds === 0 ? "Current" : timeAgo(seconds);
+  const metricLabel = x?.metric_label_values?.length > 1
+    ? getTSLabel(x.metric_label_values)
+    : result?.timeseries?.metric_expression ?? "Unknown Metric";
+
+  return `${metricLabel} - ${labelAppendValue}`;
+});
 
   let data: any[] = [];
+
   for (let j = 0; j < sortedTSData.length; j++) {
     let series = sortedTSData[j];
     let datapointsMap = new Map(
       series.datapoints.map((dp: any) => [parseInt(dp.timestamp), parseFloat(dp.value.toFixed(2))])
     );
-    let alignedValues = sortedTimestamps.map((ts) => datapointsMap.get(ts) ?? null);
-     data.push({
-      ts: alignedValues, // Filled with actual values or null
+    series.datapoints = sortedTimestamps.map((timestamp) => ({
+      timestamp: timestamp.toString(),
+      value: datapointsMap.get(timestamp) ?? null, 
+    }));
+    data.push({
+      ts: series.datapoints.map((dp: any) => dp.value), 
       label: tsLabels[j], // Assign label
     });
   }
