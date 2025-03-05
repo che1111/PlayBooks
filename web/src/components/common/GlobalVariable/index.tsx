@@ -6,7 +6,7 @@ import {
   updateGlobalVariable,
 } from "../../../store/features/playbook/playbookSlice.ts";
 import AddVariableOverlay from "./AddVariableOverlay.js";
-import { Add, CloseRounded } from "@mui/icons-material";
+import { Add, CloseRounded, ArrowDropUpOutlined, ArrowDropDownOutlined } from "@mui/icons-material";
 import useIsPrefetched from "../../../hooks/playbooks/useIsPrefetched.ts";
 import CustomButton from "../CustomButton/index.tsx";
 import CustomInput from "../../Inputs/CustomInput.tsx";
@@ -15,6 +15,7 @@ import { Tooltip } from "@mui/material";
 
 function GlobalVariables() {
   const [isAddVariableOpen, setIsAddVariableOpen] = useState(false);
+  const [extendVariable, setExtendVariable] = useState(true)
   const playbook = useSelector(currentPlaybookSelector);
   const dispatch = useDispatch();
   const isPrefetched = useIsPrefetched();
@@ -36,8 +37,9 @@ function GlobalVariables() {
 
   return (
     <div
-      className={`w-[330px] my-0 text-sm p-1 border rounded min-h-[100px] bg-white`}>
-      <div style={{ paddingLeft: 0 }} className="flex items-center gap-2 p-1">
+      className={`w-full my-0 text-sm p-1 border rounded min-h-[100px] bg-white`}>
+      <div style={{ paddingLeft: 0 }} className="flex items-center justify-between gap-2 p-1">
+        <div className="flex items-center gap-2 p-1">
         {!isPrefetched && (
           <CustomButton onClick={openOverlay}>
             <Add fontSize="small" /> Variable
@@ -47,10 +49,17 @@ function GlobalVariables() {
           `(${globalVariables?.length} variable${
             globalVariables?.length > 1 ? "s" : ""
           })`}
+        </div>
+        {
+          globalVariables?.length > 0 &&
+          <div onClick={() => setExtendVariable(!extendVariable)}>
+            {!extendVariable ? <ArrowDropUpOutlined/> : <ArrowDropDownOutlined/>}
+          </div>
+        }
       </div>
       {!isPrefetched && <hr />}
       <div className="flex items-center flex-wrap gap-1 mt-2">
-        {globalVariables?.length > 0 ? (
+        {globalVariables?.length > 0 && extendVariable ? (
           globalVariables.map((key) => (
             <div key={key} className={`flex gap-1 flex-wrap p-1`}>
               <div className="bg-blue-100 p-1 flex items-center rounded w-[80px]">
@@ -80,21 +89,26 @@ function GlobalVariables() {
             </div>
           ))
         ) : (
-          <p className="text-gray-400 text-xs">
-            Variables defined in the playbook will be visible here. Read more
-            about variables{" "}
-            <a
-              href="https://docs.drdroid.io/docs/global-variables"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-600">
-              here
-            </a>
-            .
-          </p>
+          globalVariables?.length > 0 && !extendVariable ? 
+            <p className="text-gray-400 text-xs">
+              Click on the icon to display all variables
+            </p>
+            :
+            <p className="text-gray-400 text-xs">
+              Variables defined in the playbook will be visible here. Read more
+              about variables{" "}
+              <a
+                href="https://docs.drdroid.io/docs/global-variables"
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-600">
+                here
+              </a>
+              .
+            </p>
         )}
       </div>
-
+      
       <AddVariableOverlay
         isOpen={isAddVariableOpen}
         close={() => setIsAddVariableOpen(false)}

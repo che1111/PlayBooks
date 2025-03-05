@@ -34,6 +34,7 @@ function useDrawerState(id: DrawerTypesKeys): DrawerState {
   };
 
   const toggle = () => {
+    console.log(id)
     dispatch(toggleDrawer(id as PermanentDrawerTypesKeys));
   };
 

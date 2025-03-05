@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
-// https://vitejs.dev/config/
+// https://vitejs.devconfig/
 export default defineConfig({
   base: "/",
   server: {
@@ -19,37 +19,37 @@ export default defineConfig({
     allowedHosts: true,
     proxy: {
       "/e/": {
-        target: "BE_URL",
+        target: "https://glowing-fortnight-qgq6j5r55prc4vg-8080.app.github.dev",
         changeOrigin: true,
         secure: false,
       },
       "/accounts": {
-        target: "BE_URL",
+        target: "https://glowing-fortnight-qgq6j5r55prc4vg-8080.app.github.dev",
         changeOrigin: true,
         secure: false,
       },
       "/media": {
-        target: "BE_URL",
+        target: "https://glowing-fortnight-qgq6j5r55prc4vg-8080.app.github.dev",
         changeOrigin: true,
         secure: false,
       },
       "/connectors/": {
-        target: "BE_URL",
+        target: "https://glowing-fortnight-qgq6j5r55prc4vg-8080.app.github.dev",
         changeOrigin: true,
         secure: false,
       },
       "/pb/": {
-        target: "BE_URL",
+        target: "https://glowing-fortnight-qgq6j5r55prc4vg-8080.app.github.dev",
         changeOrigin: true,
         secure: false,
       },
       "/executor/": {
-        target: "BE_URL",
+        target: "https://glowing-fortnight-qgq6j5r55prc4vg-8080.app.github.dev",
         changeOrigin: true,
         secure: false,
       },
       "/management": {
-        target: "BE_URL",
+        target: "https://glowing-fortnight-qgq6j5r55prc4vg-8080.app.github.dev",
         changeOrigin: true,
         secure: false,
       },
