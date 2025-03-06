@@ -27,23 +27,15 @@ function useGraphDimensions(
   const [data, setData] = useState<any>({});
 
   useEffect(() => {
-    if (width && height) {
       const graphData = fetchGraphData();
-      const dagreData = calculateData(graphData, width, height);
+      const dagreData = calculateData(graphData, width? width: 350, height? height:200);
       setData(dagreData);
-    }
-    instance.fitView(fitViewOptions);
   }, [
-    width,
-    height,
     playbook?.steps,
     playbook?.step_relations,
     permanentView,
-    instance,
     isOpen,
   ]);
-
-  instance.fitView(fitViewOptions);
 
   return {
     graphData,
