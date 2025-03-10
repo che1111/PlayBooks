@@ -179,3 +179,5 @@ env
 web/nginx.docker.conf
 web/get_token.lua
 deploy.docker-compose.yaml
+web/vite.config.js.dev
+web/vite.config.js
