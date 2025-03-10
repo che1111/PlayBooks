@@ -5,9 +5,9 @@ import Sidebar from "./components/Sidebar";
 function Layout() {
   return (
     <div className="relative flex h-screen overflow-hidden">
-      {/* <div className="h-screen border-r border-gray-200 flex">
+      <div className="h-screen border-r border-gray-200 flex">
         <Sidebar />
-      </div> */}
+      </div>
 
       <main
         className="w-full overflow-y-scroll"
