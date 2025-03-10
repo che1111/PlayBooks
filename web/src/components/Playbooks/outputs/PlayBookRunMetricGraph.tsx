@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import ReactECharts from "echarts-for-react";
 import styles from "./index.module.css";
 import SeeMoreText from "../SeeMoreText";
@@ -26,11 +27,38 @@ const PlayBookRunMetricGraph: React.FC<Props> = ({
     legendselectchanged: handleLegendClick(keyPressed),
   };
 
+  // Function to download the graph
+  const downloadGraph = () => {
+    if (chartRef.current) {
+      const chartInstance = chartRef.current.getEchartsInstance();
+      const img = chartInstance.getDataURL({
+        type: "png",
+        pixelRatio: 2,
+        backgroundColor: "#fff",
+      });
+
+      const link = document.createElement("a");
+      link.href = img;
+      link.download = "graph.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   return (
     <div className={styles["graph-box"]}>
       <div className={styles["graph-title"]}>
         <SeeMoreText title={""} text={title} />
+        {showGraph && (
+          <div className={styles["graph-actions"]}>
+            <button onClick={downloadGraph} className={styles["btn-gray"]}>
+              Download
+            </button>
+          </div>
+        )}
       </div>
+
       {!showGraph && (
         <div className={styles["graph-error"]}>
           {error ? (
@@ -40,6 +68,7 @@ const PlayBookRunMetricGraph: React.FC<Props> = ({
           )}
         </div>
       )}
+
       {showGraph && (
         <ReactECharts
           onEvents={onEvents}
@@ -49,6 +78,7 @@ const PlayBookRunMetricGraph: React.FC<Props> = ({
           ref={chartRef}
         />
       )}
+
       {!showGraph && timestamp && (
         <p className={styles["graph-ts-error"]}>
           <i>Updated at: {renderTimestamp(timestamp)}</i>

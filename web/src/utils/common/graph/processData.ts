@@ -12,25 +12,40 @@ export const processData = (tsData: any, result: any) => {
     );
   }
 
-  let tsLabels = sortedTSData.map((x: any) => {
-    const offsetSeconds = x?.metric_label_values?.find(
-      (e) => e.name === "offset_seconds",
-    );
-    const seconds = parseInt(offsetSeconds?.value ?? "0", 10);
-    const labelAppendValue = seconds === 0 ? "Current" : timeAgo(seconds);
-    return `${
-      result?.timeseries?.metric_expression ??
-      getTSLabel(x?.metric_label_values ?? [])
-    } - ${labelAppendValue}`;
+  let uniqueTimestamps = new Set<number>();
+  sortedTSData.forEach((series: any) => {
+    series.datapoints.forEach((dp: any) => uniqueTimestamps.add(parseInt(dp.timestamp)));
   });
 
+  let sortedTimestamps = Array.from(uniqueTimestamps).sort((a, b) => a - b);
+
+ let tsLabels = sortedTSData.map((x: any) => {
+  const offsetSeconds = x?.metric_label_values?.find(
+    (e) => e.name === "offset_seconds"
+  );
+  const seconds = parseInt(offsetSeconds?.value ?? "0", 10);
+  const labelAppendValue = seconds === 0 ? "Current" : timeAgo(seconds);
+  const metricLabel = x?.metric_label_values?.length > 1
+    ? getTSLabel(x.metric_label_values)
+    : result?.timeseries?.metric_expression ?? "Unknown Metric";
+
+  return `${metricLabel} - ${labelAppendValue}`;
+});
+
   let data: any[] = [];
+
   for (let j = 0; j < sortedTSData.length; j++) {
+    let series = sortedTSData[j];
+    let datapointsMap = new Map(
+      series.datapoints.map((dp: any) => [parseInt(dp.timestamp), parseFloat(dp.value.toFixed(2))])
+    );
+    series.datapoints = sortedTimestamps.map((timestamp) => ({
+      timestamp: timestamp.toString(),
+      value: datapointsMap.get(timestamp) ?? null, 
+    }));
     data.push({
-      ts: sortedTSData[j].datapoints.map((ts: any) => {
-        return parseFloat(ts?.value?.toFixed(2));
-      }),
-      label: sortedTSData[j].label,
+      ts: series.datapoints.map((dp: any) => dp.value), 
+      label: tsLabels[j], // Assign label
     });
   }
 
